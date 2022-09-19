@@ -1,70 +1,32 @@
-# Getting Started with Create React App
+# Span front end coding challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The React application will run locally with <b>npm start</b>. There are no dependencies on external data sources etc.
 
-## Available Scripts
+<img src='https://github.com/ideasVector/span-fe/blob/master/thumb.jpg'>
 
-In the project directory, you can run:
+## Design choices
 
-### `npm start`
+1. To mimic the Smart TV interface the application handles events for the arrow keys (representing standard TV remote control interfaces). Mouse-based interaction is, of course, also supported but note that once the mouse has been used the keyboard-based flow may be broken.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. While I understand the given requirement for the Topics menu to disappear when the images panel has focus I found this behaviour be to somewhat jarring and have left the Topics menu in place with the selected topic highlighted to give context to the images.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. Since the target device is a TV - responsiveness is limited. I have used a (rather bloated) Bootstrap CSS (<b>styles.css</b> so that flexbox is implemented - but behaviour in low resolutions is erratic.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Implementation choices
 
-### `npm run build`
+1. In order to support animated scrolling I gave up on using <b>scroll-snap_type: inline mandatory</b>. The scroll event therefore has an absolute scroll distance which is not ideal and could break responsiveness.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. In general state has been lifted to the Application component
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+3. The use of \<figure> and \<picture> tags to contain images is arguably spurious given that the solution is not aiming at broad responsiveness.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+4.  I used and modified post-compiled CSS (<b>imageGrid.css</b>) rather than adding the complexity of a PostCSS dependency to my project.
 
-### `npm run eject`
+5.  Image fetching for a topic is limited to 20 images (ordered by most recent) and this is hard-coded into the scrolling logic etc.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Acknowledgements
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+As a starting point for the horizontal scrolling I referred to a codepen by <a href='https://codepen.io/argyleink'>Adam Argyle</a>.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
