@@ -9,7 +9,7 @@ The React application will run locally with <b>npm start</b>. There are no depen
 
 2. While I understand the given requirement for the Topics menu to disappear when the images panel has focus I found this behaviour be to somewhat jarring and have left the Topics menu in place with the selected topic highlighted to give context to the images.
 
-3. Since the target device is a TV - responsiveness is limited. I have used a (rather bloated) Bootstrap CSS so that flexbox is implemented - but behaviour in low resolutions is erratic.
+3. Since the target device is a TV - responsiveness is limited. I have used a (rather bloated) Bootstrap CSS (<b>styles.css</b> so that flexbox is implemented - but behaviour in low resolutions is erratic.
 
 
 ## Implementation choices
@@ -20,7 +20,7 @@ The React application will run locally with <b>npm start</b>. There are no depen
 
 3. The use of \<figure> and \<picture> tags to contain images is arguably spurious given that the solution is not aiming at broad responsiveness.
 
-4.  I used and modified post-compiled CSS rather than adding the complexity of a PostCSS dependency to my project.
+4.  I used and modified post-compiled CSS (<b>imageGrid.css</b>) rather than adding the complexity of a PostCSS dependency to my project.
 
 
 ## Acknowledgements
