@@ -14,6 +14,7 @@ class TopicMenu extends React.Component {
                 identifier={this.props.data.topics[i].id}
                 topicSelected={this.props.data.topicSelected}
                 topicIndex={i}
+                key={this.props.data.topics[i].id}
             />);
         } else {
             return null;
