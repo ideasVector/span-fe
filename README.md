@@ -2,6 +2,7 @@
 
 The React application will run locally with <b>npm start</b>. There are no dependencies on external data sources etc.
 
+<img src='https://github.com/ideasVector/span-fe/blob/master/thumb.jpg'>
 
 ## Design choices
 
