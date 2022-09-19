@@ -23,6 +23,8 @@ The React application will run locally with <b>npm start</b>. There are no depen
 
 4.  I used and modified post-compiled CSS (<b>imageGrid.css</b>) rather than adding the complexity of a PostCSS dependency to my project.
 
+5.  Image fetching for a topic is limited to 20 images (ordered by most recent) and this is hard-coded into the scrolling logic etc.
+
 
 ## Acknowledgements
 
