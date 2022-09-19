@@ -21,7 +21,7 @@ The React application will run locally with <b>npm start</b>. There are no depen
 
 3. The use of \<figure> and \<picture> tags to contain images is arguably spurious given that the solution is not aiming at broad responsiveness.
 
-4.  I used and modified post-compiled CSS (<b>imageGrid.css</b>) rather than adding the complexity of a PostCSS dependency to my project.
+4.  I used and modified post-compiled CSS (<b>imageGrid.css</b>) rather than adding the complexity of a PostCSS dependency to my project (there are still artifacts of PostCSS dependency in the repo though)
 
 5.  Image fetching for a topic is limited to 20 images (ordered by most recent) and this is hard-coded into the scrolling logic etc.
 
