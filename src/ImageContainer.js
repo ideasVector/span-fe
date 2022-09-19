@@ -41,6 +41,7 @@ function renderImageColumn(props, i) {
             imageIndex={i}
             imageSelected={props.data.imageSelected}
             keyDownHandler={props.keyDownHandler}
+            key={props.identifier}
           />);
   } else {
     return null;
