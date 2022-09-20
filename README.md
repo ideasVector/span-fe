@@ -23,7 +23,9 @@ The React application will run locally with <b>npm start</b>. There are no depen
 
 4.  I used and modified post-compiled CSS (<b>imageGrid.css</b>) rather than adding the complexity of a PostCSS dependency to my project (there are still artifacts of PostCSS dependency in the repo though)
 
-5.  Image fetching for a topic is limited to 20 images (ordered by most recent) and this is hard-coded into the scrolling logic etc.
+5. Image fetching for a topic is limited to 20 images (ordered by most recent) and this is hard-coded into the scrolling logic etc.
+
+6. Since the requirements specifically indicated 2 rows of images the solution assumes only 2 rows. To support different numbers of rows depending on state a different approach to the ImageColumn function would be required.
 
 
 ## Acknowledgements
